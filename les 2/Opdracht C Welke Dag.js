@@ -5,5 +5,3 @@ if(schooldag = maandag){
 } else {
     console.log("Lekker uitslapen!");
 }
-
-test123

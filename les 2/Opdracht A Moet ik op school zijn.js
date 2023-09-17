@@ -1,9 +1,8 @@
 let huidigeTijd = new Date();
-time.getHours()
+let hours = huidigeTijd.getHours();
 
-  if (huidigeTijd.getHours > 9 && huidigeTijd < 16) {
-    console .log("ik moet nu naar school")
-  }
-
-
-test123
+if (hours >= 9 && hours <= 16) {
+  console.log("ik moet naar school");
+} else {
+  console.log("ik moet niet naar school");
+}
