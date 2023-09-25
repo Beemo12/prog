@@ -5,7 +5,7 @@ var naam = readlineSync.question('wie ben jij')
 
 console.log("hallo " + naam + " dit is een quiz over Yassine" )
 
-var readlineQue questions = [
+var readlineque questions = [
     {
         questions: "wat is Yassine zijn favoriete eten?",
         answers: ['kip', 'ei', 'lever', 'gevrietuurde cola blikje', ],
@@ -24,7 +24,7 @@ var questions = [
 var questions = [
     {
         questions: "wat is Yassine zijn hobby?",
-        answers: ['ggamen', 'trainen', 'programmeren', ],
+        answers: ['gamen', 'trainen', 'programmeren', ],
         correctAnswers: 'trainen'
     },
 ]
