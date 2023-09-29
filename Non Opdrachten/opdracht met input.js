@@ -16,4 +16,3 @@ if(answer == "n"){
 else {
     console.log("you died try again")
 }
-
