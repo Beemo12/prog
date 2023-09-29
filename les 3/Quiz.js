@@ -1,33 +1,39 @@
 var readlineSync = require('readline-sync');
 
 console.log("hallo welkom bij de quiz");
-var naam = readlineSync.question('wie ben jij')
+var naam = readlineSync.question('wie ben jij');
 
-console.log("hallo " + naam + " dit is een quiz over Yassine" )
+console.log("hallo " + naam + " dit is een quiz over Yassine");
 
-var readlineque questions = [
+var quizQuestions = [
     {
-        questions: "wat is Yassine zijn favoriete eten?",
-        answers: ['kip', 'ei', 'lever', 'gevrietuurde cola blikje', ],
-        correctAnswers: 'kip'
+        question: "wat is Yassine zijn favoriete eten?",
+        answers: ['kip', 'ei', 'lever', 'gefrituurde cola blikje'],
+        correctAnswer: 'kip'
     },
-]
-
-var questions = [
     {
-        questions: "wat is Yassine zijn favoriete game?",
-        answers: ['csgo', 'r6s', 'unturned', 'watchdogs', ],
-        correctAnswers: 'watchdogs'
+        question: "wat is Yassine zijn favoriete game?",
+        answers: ['csgo', 'r6s', 'unturned', 'watchdogs'],
+        correctAnswer: 'watchdogs'
     },
-]
-
-var questions = [
     {
-        questions: "wat is Yassine zijn hobby?",
-        answers: ['gamen', 'trainen', 'programmeren', ],
-        correctAnswers: 'trainen'
-    },
-]
+        question: "wat is Yassine zijn hobby?",
+        answers: ['gamen', 'trainen', 'programmeren'],
+        correctAnswer: 'trainen'
+    }
+];
+
+// Nu kun je de vragen doorlopen en de antwoorden van de gebruiker vergelijken.
+for (var i = 0; i < quizQuestions.length; i++) {
+    var userAnswer = readlineSync.keyInSelect(quizQuestions[i].answers, quizQuestions[i].question);
+    
+    if (quizQuestions[i].answers[userAnswer] === quizQuestions[i].correctAnswer) {
+        console.log('Correct!');
+    } else {
+        console.log('Helaas, dat is niet correct. Het juiste antwoord is: ' + quizQuestions[i].correctAnswer);
+    }
+}
+
 
 
 /*
