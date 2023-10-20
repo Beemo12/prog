@@ -1,3 +1,5 @@
+const readlineSync = require('readline-sync');
+
 let playerName = "Player";
 let health = 21;
 
@@ -10,8 +12,7 @@ function game() {
   console.log(`[game] Je hebt ${health} HP.`);
 
   while (health > 0) {
-    console.log("[game] Wat ga je doen? (Vechten of vluchten?)");
-    let userInput = prompt("[gebruiker voert in] ").toLowerCase();
+    const userInput = readlineSync.question("[game] Wat ga je doen? (Vechten of vluchten?) ").toLowerCase();
 
     if (userInput === "vechten") {
       let playerDamage = generateRandomDamage(3, 7);
